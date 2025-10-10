@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: VuhDoAssist
+## Notes: Фикс некликабельных панелей VuhDo
+## Author: Spread
+## Version: 1.3
+## Dependencies: VuhDo
+VuhDoAssist.lua
