@@ -109,7 +109,8 @@ local VUHDO_DEFAULT_RANGE_SPELLS = {
 	["SHAMAN"] = VUHDO_SPELL_ID_HEALING_WAVE,
 	["DRUID"] = VUHDO_SPELL_ID_HEALING_TOUCH,
 	["PRIEST"] = VUHDO_SPELL_ID_LESSER_HEAL,
-	["DEATHKNIGHT"] = nil
+	["DEATHKNIGHT"] = nil,
+	["DEMONHUNTER"] = nil
 };
 
 local VUHDO_DEFAULT_SPELL_ASSIGNMENT = {
@@ -2103,6 +2104,20 @@ VUHDO_DEFAULT_USER_CLASS_COLORS = {
 		["TR"] = 0.87,
 		["TG"] = 0.22,
 		["TB"] = 0.33,
+		["TO"] = 1,
+		["useText"] = true
+	},
+
+	[VUHDO_ID_DEMON_HUNTER] = {
+		["R"] = 0.64,
+		["G"] = 0.19,
+		["B"] = 0.79,
+		["O"] = 1,
+		["useBackground"] = true,
+		["useOpacity"] = true,
+		["TR"] = 0.74,
+		["TG"] = 0.29,
+		["TB"] = 0.89,
 		["TO"] = 1,
 		["useText"] = true
 	},

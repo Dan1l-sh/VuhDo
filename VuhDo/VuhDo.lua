@@ -36,6 +36,7 @@ VUHDO_BUFF_GROUPS = {
 	["DRUID"] = {};
 	["PRIEST"] = {};
 	["DEATHKNIGHT"] = {};
+	["DEMONHUNTER"] = {};
 };
 local VUHDO_BUFF_GROUPS = VUHDO_BUFF_GROUPS;
 

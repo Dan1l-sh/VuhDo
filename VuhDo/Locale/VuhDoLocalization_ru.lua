@@ -13,6 +13,7 @@ VUHDO_I18N_SHAMANS = "Шаман";
 VUHDO_I18N_DRUIDS = "Друид";
 VUHDO_I18N_PRIESTS = "Жрец";
 VUHDO_I18N_DEATH_KNIGHT = "Рыцарь Смерти";
+VUHDO_I18N_DEMON_HUNTER = "Охотник на демонов";
 
 -- Group Model Names
 VUHDO_I18N_GROUP = "Группа";

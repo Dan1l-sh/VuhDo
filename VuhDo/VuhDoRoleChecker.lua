@@ -208,6 +208,16 @@ function VUHDO_inspectLockRole()
 		else
 			VUHDO_INSPECTED_ROLES[tInfo["name"]] = 63; -- VUHDO_ID_RANGED_HEAL
 		end
+
+	elseif (VUHDO_ID_DEMON_HUNTER == tClassId) then
+		-- 1 = Havoc, 2 = Vengeance, 3 = Devourer
+		if (tPoints1 >= tPoints2 and tPoints1 >= tPoints3) then
+			VUHDO_INSPECTED_ROLES[tInfo["name"]] = 61; -- VUHDO_ID_MELEE_DAMAGE
+		elseif (tPoints2 >= tPoints3) then
+			VUHDO_INSPECTED_ROLES[tInfo["name"]] = 60; -- VUHDO_ID_MELEE_TANK
+		else
+			VUHDO_INSPECTED_ROLES[tInfo["name"]] = 62; -- VUHDO_ID_RANGED_DAMAGE
+		end
 	end
 
 	ClearInspectPlayer();
@@ -368,6 +378,9 @@ function VUHDO_determineRole(aUnit)
 				return 63; -- Can't tell, assume its a healer -- VUHDO_ID_RANGED_HEAL
 			end
 		end
+
+	elseif (30 == tClassId) then -- VUHDO_ID_DEMON_HUNTER
+		return 61; -- VUHDO_ID_MELEE_DAMAGE
 	end
 
 	return nil;

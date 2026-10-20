@@ -81,7 +81,8 @@ local VUHDO_ICONS_BY_CLASS_ID = {
 	[VUHDO_ID_SHAMANS] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\shaman",
 	[VUHDO_ID_DRUIDS] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\druid",
 	[VUHDO_ID_PRIESTS] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\priest",
-	[VUHDO_ID_DEATH_KNIGHT] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\deathknight"
+	[VUHDO_ID_DEATH_KNIGHT] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\deathknight",
+	[VUHDO_ID_DEMON_HUNTER] = "Interface\\AddOns\\VuhDo\\Images\\classicons\\demonhunter"
 };
 
 local VUHDO_CHARGE_COLORS = {"HOT_CHARGE_1", "HOT_CHARGE_2", "HOT_CHARGE_3", "HOT_CHARGE_4"};

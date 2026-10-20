@@ -15,6 +15,7 @@ VUHDO_I18N_SHAMANS = "Shamans";
 VUHDO_I18N_DRUIDS = "Druids";
 VUHDO_I18N_PRIESTS = "Priests";
 VUHDO_I18N_DEATH_KNIGHT = "Death Knights";
+VUHDO_I18N_DEMON_HUNTER = "Demon Hunters";
 
 
 -- Group Model Names

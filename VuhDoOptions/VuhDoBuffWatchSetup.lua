@@ -58,7 +58,8 @@ local function VUHDO_buffSetupOkayOnClick()
 						["SHAMAN"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "ShamansCombo"]),
 						["DRUID"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "DruidsCombo"]),
 						["PRIEST"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "PriestsCombo"]),
-						["DEATHKNIGHT"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "DeathKnightsCombo"])
+						["DEATHKNIGHT"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "DeathKnightsCombo"]),
+						["DEMONHUNTER"] = VUHDO_comboGetSelectedBuff(VUHDO_GLOBAL[tGenericPanel:GetName() .. "DemonHuntersCombo"])
 					};
 			elseif (VUHDO_BUFF_TARGET_UNIQUE == tBuffTarget) then
 					local tEditBox = VUHDO_GLOBAL[tGenericPanel:GetName() .. "PlayerNameEditBox"];
@@ -247,14 +248,19 @@ local function VUHDO_setupGenericBuffPanel(aBuffVariant, aGenericPanel, someCate
 				["SHAMAN"] = VUHDO_buffNameAvail(tClassBuffs[1]),
 				["DRUID"] = VUHDO_buffNameAvail(tClassBuffs[1]),
 				["PRIEST"] = VUHDO_buffNameAvail(tClassBuffs[1]),
-				["DEATHKNIGHT"] = VUHDO_buffNameAvail(tClassBuffs[1])
+				["DEATHKNIGHT"] = VUHDO_buffNameAvail(tClassBuffs[1]),
+				["DEMONHUNTER"] = VUHDO_buffNameAvail(tClassBuffs[1])
 			};
 		end
 
 		local tClassSettings = tSettings["classes"];
+		if (tClassSettings["DEMONHUNTER"] == nil) then
+			tClassSettings["DEMONHUNTER"] = tClassSettings["WARRIOR"];
+		end
 
 		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "WarriorsCombo"], tClassBuffs, tClassSettings["WARRIOR"], true);
 		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "DeathKnightsCombo"], tClassBuffs, tClassSettings["DEATHKNIGHT"], true);
+		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "DemonHuntersCombo"], tClassBuffs, tClassSettings["DEMONHUNTER"], true);
 		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "DruidsCombo"], tClassBuffs, tClassSettings["DRUID"], true);
 		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "PriestsCombo"], tClassBuffs, tClassSettings["PRIEST"], true);
 		VUHDO_addBuffsToCombo(VUHDO_GLOBAL[aGenericPanel:GetName() .. "ShamansCombo"], tClassBuffs, tClassSettings["SHAMAN"], true);

@@ -193,7 +193,7 @@
 
 	<Frame name="VuhDoBuffSetupClassTargetPanelTemplate" virtual="true">
 		<Size>
-			<AbsDimension x="229" y="290" />
+			<AbsDimension x="229" y="315" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPLEFT">
@@ -394,6 +394,25 @@
 				</Layers>
 			</Frame>
 
+			<Frame name="$parentDemonHuntersLabel" inherits="VuhDoLabelFrameTemplate">
+				<Size>
+					<AbsDimension x="75" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="12" y="-253" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString name="$parentLabel" text="VUHDO_I18N_DEMON_HUNTER" justifyH="LEFT" inherits="VuDoDefaultFontTemplate">
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+
 			<Button name="$parentDruidsCombo" inherits="VuhDoNoModelComboBoxTemplate" id="1">
 				<Size>
 					<AbsDimension x="166" y="32" />
@@ -564,6 +583,24 @@
 					<Anchor point="TOPLEFT">
 						<Offset>
 							<AbsDimension x="72" y="-250" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetAttribute("custom_function", VUHDO_buffWatchSetupDedicatedChanged);
+					</OnLoad>
+				</Scripts>
+			</Button>
+
+			<Button name="$parentDemonHuntersCombo" inherits="VuhDoNoModelComboBoxTemplate" id="1">
+				<Size>
+					<AbsDimension x="166" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="72" y="-275" />
 						</Offset>
 					</Anchor>
 				</Anchors>

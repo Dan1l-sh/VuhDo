@@ -238,6 +238,23 @@
 							</OnLoad>
 						</Scripts>
 					</Frame>
+
+					<Frame name="$parentDemonHuntersTexture" inherits="VuhDoColorSwatchTexture">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="119" y="-230" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								VUHDO_lnfSetModel(self, "VUHDO_USER_CLASS_COLORS.##30");
+								VUHDO_lnfInitColorSwatch(self, VUHDO_I18N_DEMON_HUNTER, VUHDO_I18N_DEMON_HUNTER);
+								VUHDO_lnfSetTooltip(self, VUHDO_I18N_TT_DEMON_HUNTER_COLOR);
+							</OnLoad>
+						</Scripts>
+					</Frame>
 				</Frames>
 			</Frame>
 
